@@ -1,0 +1,5 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://izabellartstudio.merlinizabella.workers.dev/sitemap.xml
+

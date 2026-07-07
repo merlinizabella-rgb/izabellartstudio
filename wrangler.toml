@@ -1,0 +1,6 @@
+name = "izabellartstudio"
+compatibility_date = "2026-07-07"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./"

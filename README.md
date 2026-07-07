@@ -43,7 +43,7 @@ Este projeto é estático. Para publicar, envie todos os arquivos da pasta para 
 URL configurada para GitHub Pages:
 
 ```text
-https://merlinizabella-rgb.github.io/izabellartstudio/
+https://izabellartstudio.merlinizabella.workers.dev/
 ```
 
 Repositório:
@@ -71,7 +71,7 @@ O projeto já inclui:
 Conferir:
 
 - Se o GitHub Pages está ativado no repositório.
-- Se a URL pública final continua sendo `https://merlinizabella-rgb.github.io/izabellartstudio/`.
+- Se a URL pública final continua sendo `https://izabellartstudio.merlinizabella.workers.dev/`.
 - Se a imagem de compartilhamento final está correta.
 - Se todos os botões de WhatsApp usam a mensagem desejada.
 
