@@ -1,4 +1,5 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://DOMINIO-OFICIAL/sitemap.xml
+Sitemap: https://merlinizabella-rgb.github.io/izabellartstudio/sitemap.xml
+
