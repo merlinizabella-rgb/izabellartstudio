@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "izabellartstudio",
+  "compatibility_date": "2026-07-07",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "preciso-criar-um-site-portfolio-deve-2"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
