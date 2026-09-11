@@ -995,62 +995,51 @@ h2 {
     var(--paper);
 }
 
+.clients-intro {
+  max-width: 720px;
+  margin: 14px 0 0;
+  color: rgba(8, 7, 6, 0.7);
+  font-size: clamp(17px, 1.7vw, 22px);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
 .brand-roll {
   position: relative;
-  display: grid;
-  gap: 14px;
-  margin-inline: calc(clamp(18px, 5vw, 74px) * -1);
-  padding: clamp(22px, 4vw, 46px) 0;
-  overflow: hidden;
+  margin-top: clamp(28px, 4vw, 48px);
+  padding: clamp(16px, 2.5vw, 26px);
   border-top: 2px solid var(--black);
   border-bottom: 2px solid var(--black);
+  border-left: 2px solid var(--black);
+  border-right: 2px solid var(--black);
   background:
-    linear-gradient(90deg, rgba(8, 7, 6, 0.035) 1px, transparent 1px) 0 0 / 26px 26px,
+    linear-gradient(90deg, rgba(8, 7, 6, 0.035) 1px, transparent 1px) 0 0 / 22px 22px,
+    linear-gradient(0deg, rgba(8, 7, 6, 0.035) 1px, transparent 1px) 0 0 / 22px 22px,
     #fff;
 }
 
 .brand-roll::before,
 .brand-roll::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 2;
-  width: clamp(60px, 12vw, 180px);
-  pointer-events: none;
-}
-
-.brand-roll::before {
-  left: 0;
-  background: linear-gradient(90deg, #fff, transparent);
-}
-
-.brand-roll::after {
-  right: 0;
-  background: linear-gradient(270deg, #fff, transparent);
+  display: none;
 }
 
 .brand-track {
-  display: flex;
-  width: max-content;
-  gap: 14px;
-  animation: brandRoll 92s linear infinite;
-}
-
-.brand-track.reverse {
-  animation-name: brandRollReverse;
-  animation-duration: 84s;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  animation: none;
 }
 
 .brand-track span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: clamp(104px, 11vw, 154px);
-  padding: 12px clamp(18px, 3vw, 36px);
-  border: 2px solid var(--black);
+  min-height: clamp(104px, 9vw, 136px);
+  padding: clamp(14px, 2vw, 22px);
+  border: 1px solid rgba(8, 7, 6, 0.16);
   color: var(--black);
-  background: #fff;
+  background: rgba(255, 255, 255, 0.82);
   font-family: var(--display);
   font-size: clamp(34px, 5.4vw, 86px);
   line-height: 0.9;
@@ -1058,22 +1047,29 @@ h2 {
   white-space: nowrap;
   word-spacing: 10px;
   box-shadow: none;
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
 }
 
 .brand-logo-card {
-  width: clamp(300px, 30vw, 460px);
+  width: auto;
 }
 
 .brand-logo-card img {
   display: block;
   width: 100%;
-  max-width: 380px;
-  max-height: 118px;
+  max-width: 190px;
+  max-height: 76px;
   object-fit: contain;
-  filter: grayscale(1) contrast(1.18);
+  filter: grayscale(1) contrast(1.2);
   mix-blend-mode: multiply;
-  opacity: 0.86;
+  opacity: 0.82;
   transition: filter 180ms ease, opacity 180ms ease, transform 180ms ease;
+}
+
+.brand-logo-card:hover {
+  border-color: var(--black);
+  background: #fff;
+  transform: translateY(-3px);
 }
 
 .brand-logo-card:hover img {
@@ -1100,24 +1096,85 @@ h2 {
   display: inline-flex;
 }
 
-.brand-track.reverse span {
-  min-height: clamp(52px, 7vw, 84px);
+.brand-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: clamp(16px, 2.5vw, 24px);
+}
+
+.brand-services span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 9px 13px;
+  border: 1px solid var(--black);
   color: var(--black);
-  background: #fff;
+  background: var(--yellow);
   font-family: var(--code);
-  font-size: clamp(15px, 2vw, 24px);
+  font-size: 13px;
   font-weight: 800;
-  box-shadow: none;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .clients-actions {
   display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   justify-content: center;
   margin-top: clamp(24px, 4vw, 46px);
 }
 
+.clients-actions .button-ghost {
+  color: var(--black);
+  background: #fff;
+}
+
+.clients-actions .button:hover,
+.clients-actions .button:focus-visible {
+  border-color: var(--black);
+}
+
 .brand-roll:hover .brand-track {
   animation-play-state: paused;
+}
+
+@media (max-width: 1100px) {
+  .brand-track {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .brand-roll {
+    padding: 10px;
+  }
+
+  .brand-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .brand-track span {
+    min-height: 96px;
+    padding: 12px;
+  }
+
+  .brand-logo-card img {
+    max-width: 150px;
+    max-height: 64px;
+  }
+
+  .clients-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .clients-actions .button {
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .mockup-card {
