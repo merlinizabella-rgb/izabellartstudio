@@ -22,6 +22,8 @@ Principais frentes apresentadas:
 ```text
 .
 ├── index.html
+├── portfolio.html
+├── videos.html
 ├── styles.css
 ├── script.js
 ├── robots.txt
@@ -33,14 +35,16 @@ Principais frentes apresentadas:
 └── assets/
     ├── brand/
     ├── brands/
-    └── social/
+    ├── portfolio/
+    ├── social/
+    └── videos/
 ```
 
 ## Publicação
 
 Este projeto é estático. Para publicar, envie todos os arquivos da pasta para o servidor ou repositório.
 
-URL configurada para GitHub Pages:
+URL pública configurada para Cloudflare Pages/Workers:
 
 ```text
 https://izabellartstudio.merlinizabella.workers.dev/
@@ -70,7 +74,7 @@ O projeto já inclui:
 
 Conferir:
 
-- Se o GitHub Pages está ativado no repositório.
+- Se o deploy da Cloudflare está apontando para a pasta correta do projeto.
 - Se a URL pública final continua sendo `https://izabellartstudio.merlinizabella.workers.dev/`.
 - Se a imagem de compartilhamento final está correta.
 - Se todos os botões de WhatsApp usam a mensagem desejada.
@@ -80,6 +84,12 @@ Conferir:
 ```text
 index.html
 ```
+
+## Páginas
+
+- `index.html`: apresentação do estúdio
+- `portfolio.html`: projetos de branding, social media e landing pages
+- `videos.html`: vídeos, motion e audiovisual
 
 ## Observação
 

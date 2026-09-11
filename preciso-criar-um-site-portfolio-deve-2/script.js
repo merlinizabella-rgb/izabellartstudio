@@ -1,5 +1,5 @@
 const cursor = document.querySelector(".cursor");
-const hoverTargets = document.querySelectorAll("a, button, h1, h2, h3, p, .hero-logo-space, .area-card, .mockup-card, .metric-card, .process-tab, .process-drag-star, .process-panel, .process-inline-cta, .brand-track span, .brand-logo-card img");
+const hoverTargets = document.querySelectorAll("a, button, h1, h2, h3, p, .hero-logo-space, .area-card, .mockup-card, .metric-card, .process-tab, .process-drag-star, .process-panel, .process-inline-cta, .brand-track span, .brand-logo-card img, .motion-video-card, .youtube-card, .social-video-card");
 const manifestoPhrase = document.querySelector(".manifesto-phrase");
 const countUpNumbers = document.querySelectorAll(".count-up");
 const processCarousel = document.querySelector(".process-carousel");
@@ -7,7 +7,7 @@ const processTabsTrack = document.querySelector(".process-tabs");
 const processTabs = document.querySelectorAll(".process-tab");
 const processDragStar = document.querySelector(".process-drag-star");
 const processPanel = document.querySelector(".process-panel");
-const revealTargets = document.querySelectorAll(".manifesto-strip, .problem-copy, .section-heading, .area-card, .brand-roll, .metric-card, .process-intro, .process-carousel, .process-outro, .final-message, .final-actions, .site-footer");
+const revealTargets = document.querySelectorAll(".manifesto-strip, .problem-copy, .section-heading, .area-card, .brand-roll, .clients-actions, .portfolio-page-copy, .video-hero-copy, .project-jump, .portfolio-category-heading, .behance-card, .portfolio-case, .landing-showcase-heading, .landing-video-card, .landing-copy-bubble, .video-section-heading, .motion-video-card, .youtube-card, .social-video-card, .portfolio-contact, .metric-card, .process-intro, .process-carousel, .process-outro, .final-message, .final-actions, .site-footer");
 const processSteps = [
   {
     number: "01",
@@ -39,6 +39,11 @@ const manifestoPhrases = [
 window.addEventListener("pointermove", (event) => {
   if (!cursor) return;
   cursor.style.transform = `translate(${event.clientX}px, ${event.clientY}px) translate(-50%, -50%)`;
+
+  const x = (event.clientX / window.innerWidth - 0.5) * 24;
+  const y = (event.clientY / window.innerHeight - 0.5) * 24;
+  document.documentElement.style.setProperty("--tilt-x", `${x}px`);
+  document.documentElement.style.setProperty("--tilt-y", `${y}px`);
 });
 
 hoverTargets.forEach((target) => {
@@ -207,7 +212,7 @@ if (processCarousel && processPanel && processTabs.length) {
   setProcessStep(0);
 }
 
-const parallaxItems = document.querySelectorAll(".cta-noise");
+const parallaxItems = document.querySelectorAll(".cta-noise, .hero-art");
 
 window.addEventListener("scroll", () => {
   const offset = window.scrollY * 0.08;
