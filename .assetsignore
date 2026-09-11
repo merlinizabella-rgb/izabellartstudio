@@ -6,5 +6,7 @@ server.out.log
 .npm-cache/
 .publish-build/
 .wrangler-config/
+.wrangler/
 node_modules/
 assets/videos/original-large/
+assets/portfolio/landing-pages/original-large/
