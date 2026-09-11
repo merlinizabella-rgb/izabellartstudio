@@ -1,0 +1,9 @@
+server.err.log
+server.out.log
+.npm-cache/
+.publish-build/
+.wrangler-config/
+.agents/
+.codex/
+node_modules/
+assets/videos/original-large/
